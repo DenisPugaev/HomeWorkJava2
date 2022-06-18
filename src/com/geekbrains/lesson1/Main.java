@@ -23,19 +23,19 @@ public class Main {
         int lengthObstacles = rnd.nextInt(1000);
         int heightObstacles = rnd.nextInt(10);
 
-        Players[] players = new Players[3];          // Создатеся первый масссив с учтастниками
-        players[0] = new Cat("Мартин", 100, 3); // Ограничиния оставил не изменяемые, по необходисмости можно поменять их в ручную или реализовать изменения через Сеттеры.
+        Players[] players = new Players[3];          // Создатеся первый масссив с учтастниками.
+        players[0] = new Cat("Мартин", 100, 3); // Ограничиния оставил не изменяемые, по необходисмости можно поменять их в ручную или реализовать изменения через Сеттеры и Сканер.
         players[1] = new Human("Борис", 500, 5);
         players[2] = new Robot("AtlasD7", 1000, 10);
 
-        Obstacles[] obstacles = new Obstacles[2];    // Создатеся второй масссив с препятсвиями
+        Obstacles[] obstacles = new Obstacles[2];    // Создатеся второй масссив с препятсвиями.
         obstacles[0] = new Track(lengthObstacles);
         obstacles[1] = new Wall(heightObstacles);
 
         for (Players p : players) {   //Участники путем перебора массива проходят препятсвия.
             p.toRun();
             obstacles[0].passing(p.getRunDistance());
-            if (p.getRunDistance() >= obstacles[0].getLength()) { // Те участники которые не прошли первый этап("Дорожку")не проходят на второй("Стена")
+            if (p.getRunDistance() >= obstacles[0].getLength()) { // Те участники которые не прошли первый этап("Дорожку")не проходят на второй("Стена").
                 p.jump();
                 obstacles[1].passing(p.getJumpHeight());
             } else System.out.println(p.getName() + " не прошел первый этап и был ДИСКВАЛИФИЦИРОВАН! \n");
