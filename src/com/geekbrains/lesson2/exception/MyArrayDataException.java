@@ -1,4 +1,4 @@
-package lesson2.exception;
+package com.geekbrains.lesson2.exception;
 
 public class MyArrayDataException extends Exception {
 

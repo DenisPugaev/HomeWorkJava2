@@ -1,7 +1,7 @@
-package lesson2;
+package com.geekbrains.lesson2;
 //Created by: Pugaev Denis
-import lesson2.exception.MyArrayDataException;
-import lesson2.exception.MyArraySizeException;
+import com.geekbrains.lesson2.exception.MyArrayDataException;
+import com.geekbrains.lesson2.exception.MyArraySizeException;
 
 import java.util.Scanner;
 /*
